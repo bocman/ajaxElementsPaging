@@ -56,11 +56,11 @@
 <script id="resultList" type="text/x-handlebars-template">
 <div class="ajax-elements">
 	<div class="row">
-		{{#each item1}}
-			<div class="element">
+		{{ #each item1 }}
+		<div class="element">
 					
-			</div>
-		{{/each}}
+		</div>
+		{{ /each }}
 	</div>
 </div>
 
@@ -79,11 +79,11 @@
                 <i class="fa fa-angle-left" aria-hidden="true"></i>
             </a>
         </li>
-        {{#times item2  }}
+        {{ #times item2  }}
         <li class="next-page">
             <a data-page={{this}}> {{this}} </a>
         </li>
-        {{/times}}
+        {{ /times }}
         <li class="nextButton">
             <a>
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
