@@ -5,7 +5,7 @@
 ```javascript
         var settings = $.extend({
 		    //URL address for elements
-		    url: ""
+		    url: "",
             //Elements where result will be showed ( script template)
             elementsResultElement: ".wrapper",
             // These are the defaults.
