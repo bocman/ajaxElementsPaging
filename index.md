@@ -4,6 +4,8 @@
 
 ```javascript
         var settings = $.extend({
+		    //URL address for elements
+		    url: ""
             //Elements where result will be showed ( script template)
             elementsResultElement: ".wrapper",
             // These are the defaults.
@@ -39,6 +41,95 @@
 
         }, options);
 ```
+
+
+## HTML osnutek
+
+```
+<div class="example-class">
+    <div class="wrapper">
+    </div>
+</div>
+
+
+<script id="resultList" type="text/x-handlebars-template">
+    <div class="ajax-elements">
+        <div class="row">
+            {{#each item1}}
+				<div class="element">
+					
+				</div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="ajax-pagination">
+        <div class="current-info"></div>
+        <ul class="pagination">
+            <li class="firstButton">
+                <a>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="prevButton">
+                <a>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            {{#times item2  }}
+
+            <li class="next-page">
+                <a data-page={{this}}> {{this}} </a>
+            </li>
+            {{/times}}
+
+            <li class="nextButton">
+                <a>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+
+            <li class="lastButton">
+                <a>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+
+        </ul>
+        <button class="btn btn-default more-button">Get all button</button>
+    </div>
+
+</script>
+
+```
+
+
+
+
+## Site.js 
+
+```
+$(document).ready(function () {
+	var resultElement = $(".example-class");
+
+	if (resultElement.length)
+    {
+       resultElement.ajaxElementsPagination({
+            url: "api/Example-elements",
+            templateWithPaginationSelector: $("#resultList"),
+            elementsResultElement: ".wrapper"
+            numberOfItems: 10,
+        });
+    }
+})
+
+```
+
+
 
 You can use the [editor on GitHub](https://github.com/bocman/ajaxElementsPaging/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
