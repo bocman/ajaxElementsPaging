@@ -1,13 +1,43 @@
 ## AjaxElementPaging knjižnica
 
-##Navodila za namestitev
+## Nastavitve
 
 ```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
+        var settings = $.extend({
+            //Elements where result will be showed ( script template)
+            elementsResultElement: ".wrapper",
+            // These are the defaults.
+            start: 0,
+            //How many items we would like to get from api request
+            numberOfItems: 10,
+            //Show dost after this number of navigation buttons
+            showDotsAfter: null,
+            //Info text, which show us how many pages are left
+            currentInfoTextSelector: ".current-info",
+            //Selector of navigations elements (without previous, next ..., only numbers of pages )
+            navButtonsSelector: ".pagination .next-page",
+            //Use previous and next button
+            usePrevNextButtons: true,
+            //Are you using first/last buttons on page?
+            useFirstLastButtons: true,
+            // Selector of previous button
+            prevButton: ".prevButton",
+            // Selector of next button
+            nextButton: ".nextButton",
+            //Selector of first page button
+            firstButtonSelector: ".firstButton",
+            //Selector of the last page button element
+            lastButtonSelector: ".lastButton",
+            //Do you wanna use last and first button functionality?
+            useLastAndFirstButton: false,
+            //Selector of searchbox element ( it should contain input and span with icon)
+            searchBoxSelector: null,
+            //URl address which return as filtered items in relation with our query
+            searchUrl: null,
+            //Do you wanna to automaticly scroll on elements after submiting search string?
+            scrollOnElementsAfterSearch: false
+
+        }, options);
 ```
 
 You can use the [editor on GitHub](https://github.com/bocman/ajaxElementsPaging/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
