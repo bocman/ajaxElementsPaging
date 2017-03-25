@@ -1,4 +1,14 @@
-## Welcome to GitHub Pages
+## AjaxElementPaging knjižnica
+
+##Navodila za namestitev
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
 
 You can use the [editor on GitHub](https://github.com/bocman/ajaxElementsPaging/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
