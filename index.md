@@ -4,35 +4,37 @@
 
 ```javascript
         var settings = $.extend({
-            // Html element v katerega se bo preslikala vsebina prevedenega Handlebar template-a
+            //Elements where result will be showed ( script template)
             elementsResultElement: ".wrapper",
-            // Od katerega elementa naprej se naj začne poizvedba
+            // These are the defaults.
             start: 0,
-            //Koliko elementov se naj vrne ob poizvedbi.
+            //How many items we would like to get from api request
             numberOfItems: 10,
-            // Število strani, od katerih naprej se naj pokažejo "pike" do zadnje strani
+            //Show dost after this number of navigation buttons
             showDotsAfter: null,
-            // Selektor elementa, ki bo prikazoval trenutno stanje odprte strani
+            //Info text, which show us how many pages are left
             currentInfoTextSelector: ".current-info",
-            //Selektor od navigacijskih gumbov, brez nazaj, naprej ... samo navigacijski gumbi
+            //Selector of navigations elements (without previous, next ..., only numbers of pages )
             navButtonsSelector: ".pagination .next-page",
-            //Ali želimo uporabljati naprej & nazaj gumba
+            //Use previous and next button
             usePrevNextButtons: true,
-			//Selektor gumba za prejšno stran
-			prevButton: ".prevButton",
-            // Selektor gumba za naslednjo stran
+            //Are you using first/last buttons on page?
+            useFirstLastButtons: true,
+            // Selector of previous button
+            prevButton: ".prevButton",
+            // Selector of next button
             nextButton: ".nextButton",
-            //Ali uporabljamo gumba prva & zadnja stran
-            useLastAndFirstButton: false,
-            //Selektor gumba za prvo stran
+            //Selector of first page button
             firstButtonSelector: ".firstButton",
-            //Selektor gumba za zadnjo stran
+            //Selector of the last page button element
             lastButtonSelector: ".lastButton",
-            //Selektor od iskalnika (searchbox)
+            //Do you wanna use last and first button functionality?
+            useLastAndFirstButton: false,
+            //Selector of searchbox element ( it should contain input and span with icon)
             searchBoxSelector: null,
-            //url naslov za iskalnik, ki bo vrnil filtrirane zadetke
+            //URl address which return as filtered items in relation with our query
             searchUrl: null,
-            // Ob iskanju se "zascrollaj" do elementsResultTemplate')
+            //Do you wanna to automaticly scroll on elements after submiting search string?
             scrollOnElementsAfterSearch: false
 
         }, options);
