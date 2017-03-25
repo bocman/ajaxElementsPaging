@@ -4,6 +4,7 @@
 
 ```javascript
         var settings = $.extend({
+
 		    //URL address for elements
 		    url: "",
             //Elements where result will be showed ( script template)
@@ -53,56 +54,50 @@
 
 
 <script id="resultList" type="text/x-handlebars-template">
-    <div class="ajax-elements">
-        <div class="row">
-            {{#each item1}}
-				<div class="element">
+<div class="ajax-elements">
+	<div class="row">
+		{{#each item1}}
+			<div class="element">
 					
-				</div>
-            {{/each}}
-        </div>
-    </div>
+			</div>
+		{{/each}}
+	</div>
+</div>
 
-    <div class="ajax-pagination">
-        <div class="current-info"></div>
-        <ul class="pagination">
-            <li class="firstButton">
-                <a>
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                </a>
-            </li>
+<div class="ajax-pagination">
+    <div class="current-info"></div>
+    <ul class="pagination">
+        <li class="firstButton">
+            <a>
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </a>
+        </li>
 
-            <li class="prevButton">
-                <a>
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                </a>
-            </li>
-
-            {{#times item2  }}
-
-            <li class="next-page">
-                <a data-page={{this}}> {{this}} </a>
-            </li>
-            {{/times}}
-
-            <li class="nextButton">
-                <a>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </a>
-            </li>
-
-            <li class="lastButton">
-                <a>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </a>
-            </li>
-
-        </ul>
-        <button class="btn btn-default more-button">Get all button</button>
-    </div>
-
+        <li class="prevButton">
+            <a>
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </a>
+        </li>
+        {{#times item2  }}
+        <li class="next-page">
+            <a data-page={{this}}> {{this}} </a>
+        </li>
+        {{/times}}
+        <li class="nextButton">
+            <a>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li class="lastButton">
+            <a>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+    <button class="btn btn-default more-button">More info</button>
+</div>
 </script>
 
 ```
@@ -112,7 +107,7 @@
 
 ## Site.js 
 
-```
+```javascript
 $(document).ready(function () {
 	var resultElement = $(".example-class");
 
